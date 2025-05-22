@@ -1,0 +1,85 @@
+1) MATCH (n:students {name:'Amy'})
+RETURN n.c_addr
+
+2) MATCH (s:students {name:'Gail'})-[:major]->(d:degrees)
+RETURN d.name, d.level
+
+3) MATCH (dpt:departments {name:'Computer Science'})-[:offers]->(c:courses)
+RETURN c.number,c.name
+ORDER BY c.number;
+
+4) MATCH(s:students)-[:register {regtime:'Fall2022'}]->(c:courses)
+RETURN s.name
+
+5) MATCH (dpt:departments {name: "Computer Science"})-[:administer]->(d:degrees)
+RETURN d.name, d.level 
+ORDER BY d.level;
+
+6)MATCH (s:students) -[:minor] -> (:degrees)
+RETURN s.snum, s.name
+ORDER BY s.snum
+
+7) MATCH (s:students) -[:register]->(c:courses {name:'Database'})
+MATCH (s) - [:major] -> (d:degrees)
+WHERE d.level in ['MS', 'PHD']
+RETURN s.snum, s.name
+
+8) MATCH (s:students)
+WHERE s.name CONTAINS "n" OR s.name CONTAINS "N"
+RETURN s.snum, s.name, s.ssn
+ORDER BY s.snum;
+
+*9) MATCH (s:students)
+WHERE  s.name >= 'Amy' AND s.name <= 'Nicole'
+ORDER BY s.name, s.snum DESC
+RETURN s.name, s.snum, s.ssn
+
+10) MATCH (c:courses)
+OPTIONAL MATCH (s:students)-[:register]->(c)
+RETURN c.number, c.name, COUNT(s) AS StudentCount
+ORDER BY c.number;
+
+11) MATCH (s:students)-[:major|minor] ->(d:degrees {name : 'Software Engineering'}) 
+WHERE s.gender = 'F'
+RETURN COUNT(s) AS FemaleStudentCount
+
+12) MATCH (s:students)-[:major]->(d:degrees)
+WITH d.name AS DegreeName, d.level AS DegreeLevel, COUNT(s) AS StudentCount
+WITH MIN(StudentCount) AS LeastPopularCount
+MATCH (s:students)-[:major]->(d:degrees)
+WITH d.name AS DegreeName, d.level AS DegreeLevel, COUNT(s) AS StudentCount, LeastPopularCount
+WHERE StudentCount = LeastPopularCount
+RETURN DegreeName, DegreeLevel, StudentCount
+ORDER BY DegreeName;
+
+13) MATCH (s:students)-[:major|minor]->(d:degrees)
+WITH d.name AS DegreeName, d.level AS DegreeLevel, COUNT(s) AS StudentCount
+WITH MIN(StudentCount) AS LeastPopularCount
+MATCH (s:students)-[:major|minor]->(d:degrees)
+WITH d.name AS DegreeName, d.level AS DegreeLevel, COUNT(s) AS StudentCount, LeastPopularCount
+WHERE StudentCount = LeastPopularCount
+RETURN DegreeName, DegreeLevel, StudentCount
+ORDER BY DegreeName;
+
+
+14) MATCH(:students)-[r:register]->(c:courses)
+RETURN c.number AS Course_Number, c.name AS Course_Name, avg(r.grade) AS AVG_Grade
+
+
+15) MATCH (s:students)-[:major|minor]->(d:degrees)<-[:administer]-(dept:departments {college: "LAS"})
+WHERE s.gender = "F"
+RETURN COUNT(DISTINCT s) AS FemaleStudentCount;
+
+16) MATCH(s:students)-[:major|minor]->(d:degrees)
+WITH d.name AS DegreeName, d.level AS DegreeLevel,
+  SUM(CASE WHEN s.gender = 'M' THEN 1 ELSE 0 END) AS MaleCount,
+  SUM(CASE WHEN s.gender = 'F' THEN 1 ELSE 0 END) AS FemaleCount
+WHERE MaleCount > FemaleCount
+RETURN DegreeName, DegreeLevel
+
+17) MATCH(s:students {name: 'Lisa'}),(dpt:departments {name:'Computer Science'})
+MATCH path = shortestPath((s)-[*]-(dpt))
+RETURN path, length(path)
+
+18) MATCH (s:students {name: "Lisa"})--(adjacent)
+RETURN DISTINCT adjacent;
