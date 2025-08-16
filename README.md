@@ -13,3 +13,9 @@ Data Science and AI Projects Description
     - Backtesting & Evaluation: Designed a rolling backtesting framework to iteratively train and test the model on sequential periods, ensuring robust performance assessment.
     - Achieved measurable precision in predicting daily upward movement (only 55% accuracy - need further improvement).
     - Visualization & Insights: Combined actual vs. predicted outcomes to visually analyze model performance and assess prediction accuracy over time.
+ 
+4. Data Science For Public Good Program: AI Chatbot for Housing Data
+   - Applied Llamaindex and Retrieval-Augmented Generation (RAG) techniques to fine-tune Ollama and Mistral LLMs using housing datasets, contributing to an AI chatbot that was successfully tested and presented to support rural Iowan communities with housing concerns.
+   - Preprocessed satellite imagery data using Python to integrate geographic context into the LLM training process, improving chatbot accuracy for housing-related questions.
+  
+     
