@@ -22,10 +22,11 @@ Data Science and AI Projects Description
    - Use KNIME Analytics Software to train the housing data using various Machine Learning Models (Linear Regression, Random Forest, and Gradient Boost) and calculate the accuracy, MME, R^2, etc, of each model together with its prediction of housing prices. Random Forest        Model is the best performing model for the dataset
   
 6. ARCGIS Dashboard: Jackson Tri-County Dashboard
+   Link: https://publicsciencecollaborative.org/jackson-rota/ 
    - Collected and analyzed opioid-related data from federal health databases, creating visual reports to identify community-level trends using R
    - Conducted geocoding and spatial analysis in R to map incident locations and reveal regional hotspots for opioid-related activity
    - Built an interactive Jackson Tri-County dashboard in ArcGIS Online to visualize opioid trends and other key community measures; findings were prepared for submission to local authorities for policy and intervention planning
 
-7. R Shiny Dashboard: Lincoln County, Nebraska
+8. R Shiny Dashboard: Lincoln County, Nebraska
   
      
