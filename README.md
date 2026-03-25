@@ -28,5 +28,8 @@ Data Science and AI Projects Description
    - Built an interactive Jackson Tri-County dashboard in ArcGIS Online to visualize opioid trends and other key community measures; findings were prepared for submission to local authorities for policy and intervention planning
 
 8. R Shiny Dashboard: Lincoln County, Nebraska
+
+9. Lee County Substance Use Monitoring System Dashboard (R Shiny)
+   - https://publicsciencecollaborative.shinyapps.io/lee_rota/ 
   
      
