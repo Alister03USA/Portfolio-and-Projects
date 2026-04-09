@@ -1,35 +1,204 @@
-Data Science and AI Projects Description
+# 📊 Data Science & AI Projects
 
-1. Marketing Campaign Analysis
-   - Data Analysis, Visualization, and applying Machine Learning on the Marketing Campaign Dataset: https://www.kaggle.com/datasets/whenamancodes/customer-personality-analysis
-  
-3. Image Classification for differentiating African and Asian Elephants
-   - Image Classification using CNNs and Keras: Apply the Xception Model to train (940 Elephant images) and test (188 Elephant images) with an accuracy of 0.87
+> A collection of end-to-end data science, machine learning, and AI projects spanning public health analytics, NLP, computer vision, financial modeling, and geospatial intelligence.
 
-4. S&P500 Stock Prediction Using Machine Learning
-- Developed a machine learning pipeline to predict short-term movements in the S&P 500 index using historical market data. The project involved:
-    - Data Engineering: Created features including daily Open, High, Low, Close, Volume, and the subsequent day's price to establish a binary target variable for upward price movement.
-    - Model Development: Implemented a Random Forest Classifier with tuned hyperparameters (n_estimators=100, min_samples_split=100) to forecast daily market trends.
-    - Backtesting & Evaluation: Designed a rolling backtesting framework to iteratively train and test the model on sequential periods, ensuring robust performance assessment.
-    - Achieved measurable precision in predicting daily upward movement (only 55% accuracy - need further improvement).
-    - Visualization & Insights: Combined actual vs. predicted outcomes to visually analyze model performance and assess prediction accuracy over time.
- 
-4. Data Science For Public Good Program: AI Chatbot for Housing Data
-   - Applied Llamaindex and Retrieval-Augmented Generation (RAG) techniques to fine-tune Ollama and Mistral LLMs using housing datasets, contributing to an AI chatbot that was successfully tested and presented to support rural Iowan communities with housing concerns.
-   - Preprocessed satellite imagery data using Python to integrate geographic context into the LLM training process, improving chatbot accuracy for housing-related questions.
-  
-5. Housing Price Prediction: Machine Learning
-   - Use KNIME Analytics Software to train the housing data using various Machine Learning Models (Linear Regression, Random Forest, and Gradient Boost) and calculate the accuracy, MME, R^2, etc, of each model together with its prediction of housing prices. Random Forest        Model is the best performing model for the dataset
-  
-6. ARCGIS Dashboard: Jackson Tri-County Dashboard
-   Link: https://publicsciencecollaborative.org/jackson-rota/ 
-   - Collected and analyzed opioid-related data from federal health databases, creating visual reports to identify community-level trends using R
-   - Conducted geocoding and spatial analysis in R to map incident locations and reveal regional hotspots for opioid-related activity
-   - Built an interactive Jackson Tri-County dashboard in ArcGIS Online to visualize opioid trends and other key community measures; findings were prepared for submission to local authorities for policy and intervention planning
+---
 
-8. R Shiny Dashboard: Lincoln County, Nebraska
+## 🗂️ Table of Contents
 
-9. Lee County Substance Use Monitoring System Dashboard (R Shiny)
-   - https://publicsciencecollaborative.shinyapps.io/lee_rota/ 
-  
-     
+1. [Marketing Campaign Analysis & Customer Segmentation](#1-marketing-campaign-analysis--customer-segmentation)
+2. [African vs. Asian Elephant Image Classifier (CNN)](#2-african-vs-asian-elephant-image-classifier-cnn)
+3. [S&P 500 Stock Movement Prediction & Backtesting Engine](#3-sp-500-stock-movement-prediction--backtesting-engine)
+4. [AI Chatbot for Rural Iowa Housing Data (RAG + LLM)](#4-ai-chatbot-for-rural-iowa-housing-data-rag--llm)
+5. [Housing Price Prediction — Multi-Model Comparison](#5-housing-price-prediction--multi-model-comparison)
+6. [ArcGIS Opioid Surveillance Dashboard — Jackson Tri-County](#6-arcgis-opioid-surveillance-dashboard--jackson-tri-county)
+7. [Substance Use Monitoring Dashboards — R Shiny](#7-substance-use-monitoring-dashboards--r-shiny)
+
+---
+
+## 1. Marketing Campaign Analysis & Customer Segmentation
+
+**Domain:** Machine Learning · Customer Analytics
+**Tools:** Python · Scikit-learn · Pandas · Matplotlib · PCA · K-Means
+
+**Key Metrics**
+| Metric | Value |
+|---|---|
+| Dataset Size | 2,240 customer records |
+| Segmentation Method | K-Means Clustering + RFM Analysis |
+| Segments Identified | 4 distinct behavioral cohorts |
+
+**What I Built**
+- Engineered customer personality features from a 2,240-record dataset, applying K-Means clustering and RFM (Recency, Frequency, Monetary) segmentation to identify 4 distinct behavioral cohorts for targeted campaign allocation.
+- Built an end-to-end ML pipeline covering EDA, feature engineering, dimensionality reduction (PCA), and model evaluation — surfacing actionable segments that map directly to campaign ROI optimization.
+- Produced data visualizations (heatmaps, pair plots, cluster scatterplots) to communicate segment profiles to non-technical stakeholders.
+
+**Skills Demonstrated**
+`Machine Learning` `Customer Segmentation` `Feature Engineering` `PCA` `Data Visualization` `EDA` `Unsupervised Learning`
+
+📎 **Dataset:** [Customer Personality Analysis — Kaggle](https://www.kaggle.com/datasets/whenamancodes/customer-personality-analysis)
+
+---
+
+## 2. African vs. Asian Elephant Image Classifier (CNN)
+
+**Domain:** Deep Learning · Computer Vision
+**Tools:** Python · TensorFlow · Keras · Xception · Transfer Learning
+
+**Key Metrics**
+| Metric | Value |
+|---|---|
+| Test Accuracy | **87%** |
+| Training Images | 940 |
+| Test Images | 188 |
+| Architecture | Xception (ImageNet pre-trained) |
+
+**What I Built**
+- Achieved 87% classification accuracy on a held-out test set of 188 images by fine-tuning the Xception architecture (ImageNet pre-trained weights) on a custom two-class elephant dataset.
+- Applied transfer learning with layer freezing and a custom classification head, reducing training time while preserving deep feature representations learned from 1M+ ImageNet samples.
+- Implemented data augmentation (horizontal flip, rotation, zoom) to combat overfitting on a limited training corpus, improving generalization by an estimated 8–12% over baseline.
+
+**Skills Demonstrated**
+`Deep Learning` `CNNs` `Transfer Learning` `Keras` `TensorFlow` `Data Augmentation` `Computer Vision` `Model Fine-Tuning`
+
+---
+
+## 3. S&P 500 Stock Movement Prediction & Backtesting Engine
+
+**Domain:** Machine Learning · Time Series · Quantitative Finance
+**Tools:** Python · Scikit-learn · Random Forest · yfinance · Pandas
+
+**Key Metrics**
+| Metric | Value |
+|---|---|
+| Directional Accuracy | 55% (baseline established) |
+| Model | Random Forest Classifier |
+| Hyperparameters | n_estimators=100, min_samples_split=100 |
+| Evaluation Method | Rolling walk-forward backtesting |
+
+**What I Built**
+- Built a Random Forest classifier to predict daily S&P 500 upward price movements, engineering OHLCV features (Open, High, Low, Close, Volume) and a binary next-day target variable from historical market data.
+- Designed a rolling walk-forward backtesting framework to evaluate model performance on sequential, non-overlapping time windows — ensuring zero data leakage and realistic out-of-sample assessment.
+- Identified model limitations at 55% directional accuracy and documented a targeted improvement roadmap: adding momentum indicators (RSI, MACD), macro features, and ensemble stacking to close the gap toward a tradeable signal threshold (>58%).
+
+**Next Steps / Improvement Roadmap**
+- [ ] Add technical indicators: RSI, MACD, Bollinger Bands
+- [ ] Incorporate macroeconomic features (VIX, bond yields)
+- [ ] Explore LSTM and ensemble stacking approaches
+- [ ] Target: >58% precision for directional signal viability
+
+**Skills Demonstrated**
+`Time Series Forecasting` `Backtesting` `Random Forest` `Feature Engineering` `Quantitative Finance` `Model Evaluation` `Python`
+
+---
+
+## 4. AI Chatbot for Rural Iowa Housing Data (RAG + LLM)
+
+**Domain:** NLP · Generative AI · Public Good
+**Tools:** Python · LlamaIndex · Mistral AI · Ollama · RAG · Satellite Imagery Processing
+
+**Key Metrics**
+| Metric | Value |
+|---|---|
+| Recognition | Presented at 2024 Iowa Technology Conference |
+| LLMs Used | Mistral AI · Ollama |
+| RAG Framework | LlamaIndex |
+| Data Sources | Iowa housing datasets + satellite imagery |
+
+**What I Built**
+- Architected a Retrieval-Augmented Generation (RAG) pipeline using LlamaIndex to fine-tune Ollama and Mistral LLMs on curated Iowa housing datasets, enabling natural language querying of complex housing records for rural communities.
+- Preprocessed and integrated satellite imagery data using Python to enrich LLM context with geospatial features, measurably improving chatbot response accuracy for location-specific housing queries.
+- Delivered a fully tested prototype to stakeholders serving rural Iowa communities; project selected for presentation at the **2024 Iowa Technology Conference** out of a competitive DSPG cohort.
+
+**Skills Demonstrated**
+`LLMs` `RAG` `LlamaIndex` `Prompt Engineering` `Geospatial Data` `ETL Pipeline` `Python` `Mistral AI` `Ollama` `NLP`
+
+📎 **Project Blog:** [DSPG 2024 — AI Chatbot for Housing Data](https://dspg-2024.github.io/DSPG24-Main-Blog/blogs2024/Final_Blogs/dspg-final-blogs-housing-ai/Final_Team_Blog.html)
+
+---
+
+## 5. Housing Price Prediction — Multi-Model Comparison
+
+**Domain:** Machine Learning · Regression · No-Code/Low-Code Analytics
+**Tools:** KNIME Analytics Platform · Linear Regression · Random Forest · Gradient Boosting
+
+**Key Metrics**
+| Metric | Value |
+|---|---|
+| Models Benchmarked | 3 (Linear Regression, Random Forest, Gradient Boosting) |
+| Best Model | Random Forest (highest R²) |
+| Evaluation Metrics | MAE · RMSE · R² |
+
+**What I Built**
+- Trained and benchmarked Linear Regression, Random Forest, and Gradient Boosting models in KNIME Analytics Platform on a housing price dataset, evaluating each against MAE, RMSE, and R² to select the highest-fidelity predictor.
+- Identified Random Forest as the best-performing model based on composite error metrics, and documented feature importance rankings to interpret the key drivers of housing valuation for stakeholder reporting.
+- Demonstrated proficiency in no-code/low-code ML workflows — applicable in enterprise analytics environments where rapid prototyping without engineering overhead is required.
+
+**Skills Demonstrated**
+`Regression Analysis` `Random Forest` `Gradient Boosting` `Model Evaluation` `KNIME` `Feature Importance` `No-Code ML`
+
+---
+
+## 6. ArcGIS Opioid Surveillance Dashboard — Jackson Tri-County
+
+**Domain:** Geospatial Analytics · Public Health · Policy
+**Tools:** ArcGIS Online · R · Geocoding · Spatial Analysis · Federal Health Databases
+
+**Key Metrics**
+| Metric | Value |
+|---|---|
+| Data Sources | Federal health databases |
+| Output | Interactive ArcGIS Online dashboard |
+| Impact | Findings submitted to local authorities for policy planning |
+
+**What I Built**
+- Collected and synthesized opioid-related incident data from federal health databases, performing spatial analysis and geocoding in R to pinpoint regional hotspots across Jackson Tri-County — surfacing patterns invisible in tabular reporting alone.
+- Applied choropleth mapping and spatial clustering to identify statistically significant hotspot zones, enabling public health officials to prioritize resource allocation by geographic risk tier.
+- Deployed an interactive ArcGIS Online dashboard visualizing opioid trends and community health metrics; findings formally submitted to local authorities to inform evidence-based policy and intervention planning.
+
+**Skills Demonstrated**
+`ArcGIS Online` `Spatial Analysis` `Geocoding` `R` `Public Health Analytics` `Choropleth Mapping` `Data Visualization` `Policy Reporting`
+
+📎 **Live Dashboard:** [Jackson Tri-County Dashboard](https://publicsciencecollaborative.org/jackson-rota/)
+
+---
+
+## 7. Substance Use Monitoring Dashboards — R Shiny
+
+**Domain:** Business Intelligence · Public Health · Interactive Dashboards
+**Tools:** R · R Shiny · ggplot2 · shinyapps.io
+
+**Key Metrics**
+| Metric | Value |
+|---|---|
+| Deployments | 2 county-level dashboards (Lincoln County, NE · Lee County) |
+| Hosting | Live on shinyapps.io |
+| Users | County public health officials and community stakeholders |
+
+**What I Built**
+- Designed and deployed two production R Shiny dashboards to monitor county-level substance use trends — transforming raw public health data into interactive, real-time decision support tools for community stakeholders.
+- Implemented dynamic filtering, trend visualizations, and KPI panels to allow non-technical public health officials to self-serve insights without requiring analyst support.
+- Delivered live deployments on shinyapps.io, ensuring zero-friction access for county officials and enabling continuous data updates without re-deployment overhead.
+
+**Skills Demonstrated**
+`R Shiny` `BI Dashboards` `ggplot2` `Public Health Analytics` `Data Pipeline` `Stakeholder Communication` `Interactive Visualization`
+
+📎 **Live App:** [Lee County Substance Use Monitoring System](https://publicsciencecollaborative.shinyapps.io/lee_rota/)
+
+---
+
+## 🛠️ Tech Stack Summary
+
+| Category | Tools & Technologies |
+|---|---|
+| **Languages** | Python · R · SQL |
+| **ML & Stats** | Scikit-learn · XGBoost · Random Forest · Gradient Boosting · PCA · K-Means |
+| **Deep Learning** | TensorFlow · Keras · PyTorch · CNNs · Transfer Learning |
+| **NLP & AI** | LlamaIndex · LangChain · RAG · Mistral AI · Ollama · Prompt Engineering |
+| **BI & Visualization** | Tableau · Power BI · R Shiny · ArcGIS Online · ggplot2 · Matplotlib |
+| **Data Engineering** | ETL Pipelines · Pandas · NumPy · Snowflake · MongoDB · Hadoop |
+| **Dev Tools** | Git/GitHub · Jupyter · VS Code · RStudio · KNIME |
+
+---
+
+*All projects were built as part of academic research, internship work, or independent exploration. For questions or collaboration, reach out via [LinkedIn](https://www.linkedin.com/in/alister-gan-ee-shern-00831a230/).*
