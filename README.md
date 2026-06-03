@@ -232,6 +232,10 @@
 
 📎 **Live App:** [Lee County Substance Use Monitoring System](https://publicsciencecollaborative.shinyapps.io/lee_rota/)
 
+📎 **Live App:** [Dubuque County Substance Use Monitoring System](https://publicsciencecollaborative.shinyapps.io/dubuque_substance_use_monitoring/)
+
+
+
 ---
 
 ## 🛠️ Tech Stack Summary
