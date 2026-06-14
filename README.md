@@ -15,6 +15,7 @@
 7. [Housing Price Prediction — Multi-Model Comparison](#7-housing-price-prediction--multi-model-comparison)
 8. [ArcGIS Opioid Surveillance Dashboard — Jackson Tri-County](#8-arcgis-opioid-surveillance-dashboard--jackson-tri-county)
 9. [Substance Use Monitoring Dashboards — R Shiny](#9-substance-use-monitoring-dashboards--r-shiny)
+10. [Quantitative Finance: Stochastic Asset Price Modeling](#10-quantitative-finance-stochastic-asset-price-modeling)
 
 ---
 
@@ -235,6 +236,32 @@
 📎 **Live App:** [Dubuque County Substance Use Monitoring System](https://publicsciencecollaborative.shinyapps.io/dubuque_substance_use_monitoring/)
 
 
+
+---
+
+## 10. Quantitative Finance: Stochastic Asset Price Modeling
+
+**Domain:** Quantitative Finance · Stochastic Processes · Risk Modeling
+**Tools:** Python · NumPy · Pandas · Matplotlib · Monte Carlo Simulation
+
+**Key Metrics**
+
+| Metric            | Value                                              |
+| ----------------- | -------------------------------------------------- |
+| Simulation Method | Monte Carlo Simulation                             |
+| Price Process     | Geometric Brownian Motion (GBM)                    |
+| Inputs            | Return, Volatility, Investment Horizon             |
+| Output            | Simulated Asset Price Paths & Wealth Distributions |
+
+**What I Built**
+
+* Developed a Monte Carlo simulation framework using Geometric Brownian Motion (GBM) to model stochastic asset price dynamics under varying assumptions for expected return, volatility, and investment horizon.
+* Generated thousands of simulated asset price paths to quantify uncertainty, estimate terminal wealth distributions, and evaluate risk-return tradeoffs in financial markets.
+* Built interactive visualizations that allow users to explore how market volatility and investment horizons influence portfolio outcomes and long-term wealth accumulation.
+* Applied foundational concepts used in quantitative finance, derivatives pricing, and portfolio risk management, establishing the mathematical groundwork for future projects in market prediction and algorithmic trading.
+
+**Skills Demonstrated**
+`Quantitative Finance` `Stochastic Processes` `Monte Carlo Simulation` `Geometric Brownian Motion` `Risk Modeling` `Financial Mathematics` `Python` `Data Visualization`
 
 ---
 
