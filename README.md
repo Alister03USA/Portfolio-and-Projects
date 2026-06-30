@@ -235,7 +235,7 @@
 
 📎 **Live App:** [Dubuque County Substance Use Monitoring System](https://publicsciencecollaborative.shinyapps.io/dubuque_substance_use_monitoring/)
 
-
+📎 **Live App:** [Johnson County Substance Use Monitoring System](https://publicsciencecollaborative.shinyapps.io/johnson_county_substance_use_monitoring/)
 
 ---
 
