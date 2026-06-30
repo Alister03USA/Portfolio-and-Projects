@@ -165,7 +165,7 @@
 
 ---
 
-## 7. Housing Price Prediction — Multi-Model Comparison
+## 7. Housing Price Prediction: Multi-Model Comparison
 
 **Domain:** Machine Learning · Regression · No-Code/Low-Code Analytics  
 **Tools:** KNIME Analytics Platform · Linear Regression · Random Forest · Gradient Boosting
@@ -187,7 +187,7 @@
 
 ---
 
-## 8. ArcGIS Opioid Surveillance Dashboard — Jackson Tri-County
+## 8. ArcGIS Opioid Surveillance Dashboard: Jackson Tri-County
 
 **Domain:** Geospatial Analytics · Public Health · Policy  
 **Tools:** ArcGIS Online · R · Geocoding · Spatial Analysis · Federal Health Databases
@@ -211,7 +211,7 @@
 
 ---
 
-## 9. Substance Use Monitoring Dashboards — R Shiny
+## 9. Substance Use Monitoring Dashboards: R Shiny & Power BI
 
 **Domain:** Business Intelligence · Public Health · Interactive Dashboards  
 **Tools:** R · R Shiny · ggplot2 · shinyapps.io
@@ -219,12 +219,12 @@
 **Key Metrics**
 | Metric | Value |
 |---|---|
-| Deployments | 2 county-level dashboards (Lincoln County, NE · Lee County) |
+| Deployments | County-level dashboards (Lincoln County, NE · Lee County) |
 | Hosting | Live on shinyapps.io |
 | Users | County public health officials and community stakeholders |
 
 **What I Built**
-- Designed and deployed two production R Shiny dashboards to monitor county-level substance use trends — transforming raw public health data into interactive, real-time decision support tools for community stakeholders.
+- Designed and deployed production R Shiny dashboards to monitor county-level substance use trends — transforming raw public health data into interactive, real-time decision support tools for community stakeholders.
 - Implemented dynamic filtering, trend visualizations, and KPI panels to allow non-technical public health officials to self-serve insights without requiring analyst support.
 - Delivered live deployments on shinyapps.io, ensuring zero-friction access for county officials and enabling continuous data updates without re-deployment overhead.
 
